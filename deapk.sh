@@ -21,9 +21,10 @@ if [ "$#" -eq 2 ]
 fi
 
 ### begin configure tool path
-apktool=~/lib/decompile/apktool_2.3.4.jar
-dextool=~/lib/decompile/dex-tools-2.1-SNAPSHOT/d2j-dex2jar.sh
-jdgui=~/lib/decompile/jd-gui-1.4.0.jar
+scriptdir=`dirname $0`
+apktool=$scriptdir/apktool_2.3.4.jar
+dextool=$scriptdir/dex-tools-2.1-SNAPSHOT/d2j-dex2jar.sh
+jdgui=$scriptdir/jd-gui-1.4.0.jar
 ### end configure tool path
 
 java -jar $apktool -o $outdir $apkfile
